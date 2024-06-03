@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "comments",
+  "info": {
+    "singularName": "comment",
+    "pluralName": "comments",
+    "displayName": "comment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "comments": {
+      "type": "richtext"
+    },
+    "username": {
+      "type": "string"
+    },
+    "profileimage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "tweetid": {
+      "type": "uid",
+      "targetField": "username"
+    },
+    "Reference": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::twitter.twitter"
+    }
+  }
+}

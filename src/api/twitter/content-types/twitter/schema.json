@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "twitters",
+  "info": {
+    "singularName": "twitter",
+    "pluralName": "twitters",
+    "displayName": "twitter",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "username": {
+      "type": "string"
+    },
+    "profileimage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "emailaddress": {
+      "type": "email"
+    },
+    "publishedtime": {
+      "type": "datetime"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "tweetimage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment.comment"
+    }
+  }
+}
